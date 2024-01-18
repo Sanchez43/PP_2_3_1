@@ -21,22 +21,22 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
+    @Column(name = "id")
     private Long id;
 
     @Size(min = 2, max = 30, message = " Name should be between 2 and 30 characters")
     @NotEmpty(message = "Name should not be empty!")
-    @Column
+    @Column(name = "name")
     private String name;
 
     @Size(min = 2, max = 30, message = " Surname should be between 2 and 30 characters")
     @NotEmpty(message = "Last Name should not be empty!")
-    @Column
+    @Column(name = "last_name")
     private String lastName;
 
     @Email(message = "Email should be valid!")
     @NotEmpty(message = "Email should not be empty!")
-    @Column
+    @Column(name = "email")
     private String email;
 
     @Override
